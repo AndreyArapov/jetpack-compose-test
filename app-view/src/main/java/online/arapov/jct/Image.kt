@@ -1,11 +1,12 @@
 package online.arapov.jct
 
 import android.net.Uri
-import androidx.recyclerview.widget.DiffUtil
+import com.github.javafaker.Faker
 
 data class Image(
     val id: Int,
-    val uri: Uri
+    val uri: Uri,
+    val text: String
 ) {
 
     companion object {
@@ -16,19 +17,9 @@ data class Image(
             Uri.parse("file:///android_asset/4.jpg"),
             Uri.parse("file:///android_asset/5.jpg"),
         )
-
+        private val faker = Faker.instance().lebowski()
         val LIST_IMAGES = List(100) {
-            Image(it, uriList.random())
-        }
-
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Image>() {
-            override fun areItemsTheSame(oldItem: Image, newItem: Image): Boolean {
-                return oldItem.id == newItem.id
-            }
-
-            override fun areContentsTheSame(oldItem: Image, newItem: Image): Boolean {
-                return oldItem.uri == newItem.uri
-            }
+            Image(it, uriList.random(), faker.character())
         }
     }
 }
