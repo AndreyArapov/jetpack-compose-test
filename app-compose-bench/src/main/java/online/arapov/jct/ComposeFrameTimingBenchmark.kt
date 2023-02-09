@@ -16,7 +16,7 @@ private const val PACKAGE_NAME = "online.arapov.jct.compose"
 
 
 @RunWith(AndroidJUnit4::class)
-class FrameTimingBenchmark {
+class ComposeFrameTimingBenchmark {
 
     @get:Rule
     val benchmarkRule = MacrobenchmarkRule()

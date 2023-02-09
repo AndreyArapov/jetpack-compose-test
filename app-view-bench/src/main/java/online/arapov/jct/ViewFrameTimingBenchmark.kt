@@ -15,7 +15,7 @@ private const val ITERATIONS = 10
 private const val PACKAGE_NAME = "online.arapov.jct.view"
 
 @RunWith(AndroidJUnit4::class)
-class FrameTimingBenchmark {
+class ViewFrameTimingBenchmark {
 
     @get:Rule
     val benchmarkRule = MacrobenchmarkRule()
