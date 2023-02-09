@@ -32,9 +32,9 @@ class ViewFrameTimingBenchmark {
                 startActivityAndWait()
             }
         ) {
-            val column = device.findObject(By.res(packageName, "rv"))
-            column.setGestureMargin(device.displayWidth / 5)
-            repeat(3) { column.fling(Direction.DOWN) }
+            val list = device.findObject(By.res(packageName, "rv"))
+            list.setGestureMargin(device.displayWidth / 5)
+            repeat(3) { list.fling(Direction.DOWN) }
         }
     }
 
@@ -50,9 +50,12 @@ class ViewFrameTimingBenchmark {
                 startActivityAndWait()
             }
         ) {
-            val column = device.findObject(By.res(packageName, "rv"))
-            column.setGestureMargin(device.displayWidth / 5)
-            repeat(3) { column.fling(Direction.DOWN) }
+            val list = device.findObject(By.res(packageName, "rv"))
+            list.setGestureMargin(device.displayWidth / 5)
+            list.fling(Direction.DOWN)
+            list.fling(Direction.UP)
+            list.fling(Direction.DOWN)
+            list.fling(Direction.UP)
         }
     }
 
@@ -68,9 +71,9 @@ class ViewFrameTimingBenchmark {
                 startActivityAndWait()
             }
         ) {
-            val column = device.findObject(By.res(packageName, "rv"))
-            column.setGestureMargin(device.displayWidth / 5)
-            repeat(3) { column.fling(Direction.DOWN) }
+            val list = device.findObject(By.res(packageName, "rv"))
+            list.setGestureMargin(device.displayWidth / 5)
+            repeat(3) { list.fling(Direction.DOWN) }
         }
     }
 }

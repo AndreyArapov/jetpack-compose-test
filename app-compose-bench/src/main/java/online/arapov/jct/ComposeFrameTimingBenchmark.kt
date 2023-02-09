@@ -53,7 +53,10 @@ class ComposeFrameTimingBenchmark {
         ) {
             val column = device.findObject(By.res("lazyColumn"))
             column.setGestureMargin(device.displayWidth / 5)
-            repeat(3) { column.fling(Direction.DOWN) }
+            column.fling(Direction.DOWN)
+            column.fling(Direction.UP)
+            column.fling(Direction.DOWN)
+            column.fling(Direction.UP)
         }
     }
 
