@@ -17,3 +17,6 @@ include ':app-compose'
 include ':app-compose-bench'
 include ':app-view'
 include ':app-view-bench'
+
+include ':app-composite'
+include ':app-composite-bench'
